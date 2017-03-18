@@ -237,6 +237,11 @@ public class Edit extends javax.swing.JFrame {
         jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
 
         generate.setText("generate");
+        generate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -427,6 +432,10 @@ public class Edit extends javax.swing.JFrame {
     private void txtNama1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNama1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNama1MouseClicked
+
+    private void generateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_generateActionPerformed
 
     /**
      * @param args the command line arguments

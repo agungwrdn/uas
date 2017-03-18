@@ -482,57 +482,57 @@ public class Pemesanan extends javax.swing.JFrame {
 
     private void setHarga() {
         if(StasiunA.getSelectedItem().equals("Malang") && StasiunAk.getSelectedItem().equals("Surabaya") && JenisKereta.getSelectedItem().equals("Ekonomi")){
-        harga.setText("10.000"); //To change body of generated methods, choose Tools | Templates.
+        harga.setText("10000"); //To change body of generated methods, choose Tools | Templates.
     } else if(StasiunA.getSelectedItem().equals("Surabaya") && StasiunAk.getSelectedItem().equals("Malang") && JenisKereta.getSelectedItem().equals("Ekonomi")) {
-        harga.setText("10.000");    
+        harga.setText("10000");    
         }
         else if(StasiunA.getSelectedItem().equals("Surabaya") && StasiunAk.getSelectedItem().equals("Kediri") && JenisKereta.getSelectedItem().equals("Ekonomi")) {
-        harga.setText("15.000");    
+        harga.setText("15000");    
         }
         else if(StasiunA.getSelectedItem().equals("Kediri") && StasiunAk.getSelectedItem().equals("Surabaya") && JenisKereta.getSelectedItem().equals("Ekonomi")) {
-        harga.setText("15.000");    
+        harga.setText("15000");    
         }
          else if(StasiunA.getSelectedItem().equals("Kediri") && StasiunAk.getSelectedItem().equals("Malang") && JenisKereta.getSelectedItem().equals("Ekonomi")) {
-        harga.setText("15.000");    
+        harga.setText("15000");    
         }
          else if(StasiunA.getSelectedItem().equals("Malang") && StasiunAk.getSelectedItem().equals("Kediri") && JenisKereta.getSelectedItem().equals("Ekonomi")) {
-        harga.setText("15.000");    
+        harga.setText("15000");    
         }
          else if(StasiunA.getSelectedItem().equals("Kediri") && StasiunAk.getSelectedItem().equals("Surabaya") && JenisKereta.getSelectedItem().equals("Bisnis")) {
-        harga.setText("25.000");    
+        harga.setText("25000");    
         }
           else if(StasiunA.getSelectedItem().equals("Surabaya") && StasiunAk.getSelectedItem().equals("Kediri") && JenisKereta.getSelectedItem().equals("Bisnis")) {
-        harga.setText("25.000");    
+        harga.setText("25000");    
         }
           else if(StasiunA.getSelectedItem().equals("Malang") && StasiunAk.getSelectedItem().equals("Surabaya") && JenisKereta.getSelectedItem().equals("Bisnis")) {
-        harga.setText("21.000");   
+        harga.setText("21000");   
           }
         else if(StasiunA.getSelectedItem().equals("Surabaya") && StasiunAk.getSelectedItem().equals("Malang") && JenisKereta.getSelectedItem().equals("Bisnis")) {
-        harga.setText("24.000");   
+        harga.setText("24000");   
           }
         else if(StasiunA.getSelectedItem().equals("Kediri") && StasiunAk.getSelectedItem().equals("Malang") && JenisKereta.getSelectedItem().equals("Bisnis")) {
-        harga.setText("27.000");    
+        harga.setText("27000");    
         }
          else if(StasiunA.getSelectedItem().equals("Malang") && StasiunAk.getSelectedItem().equals("Kediri") && JenisKereta.getSelectedItem().equals("Bisnis")) {
-        harga.setText("27.000");    
+        harga.setText("27000");    
         }
          else if(StasiunA.getSelectedItem().equals("Kediri") && StasiunAk.getSelectedItem().equals("Surabaya") && JenisKereta.getSelectedItem().equals("Eksekutif")) {
-        harga.setText("52.000");    
+        harga.setText("52000");    
         }
           else if(StasiunA.getSelectedItem().equals("Surabaya") && StasiunAk.getSelectedItem().equals("Kediri") && JenisKereta.getSelectedItem().equals("Eksekutif")) {
-        harga.setText("53.000");    
+        harga.setText("53000");    
         }
           else if(StasiunA.getSelectedItem().equals("Malang") && StasiunAk.getSelectedItem().equals("Surabaya") && JenisKereta.getSelectedItem().equals("Eksekutif")) {
-        harga.setText("45.000");   
+        harga.setText("45000");   
           }
         else if(StasiunA.getSelectedItem().equals("Surabaya") && StasiunAk.getSelectedItem().equals("Malang") && JenisKereta.getSelectedItem().equals("Eksekutif")) {
-        harga.setText("45.000");   
+        harga.setText("45000");   
           }
         else if(StasiunA.getSelectedItem().equals("Kediri") && StasiunAk.getSelectedItem().equals("Malang") && JenisKereta.getSelectedItem().equals("Eksekutif")) {
-        harga.setText("56.000");    
+        harga.setText("56000");    
         }
          else if(StasiunA.getSelectedItem().equals("Malang") && StasiunAk.getSelectedItem().equals("Kediri") && JenisKereta.getSelectedItem().equals("Eksekutif")) {
-        harga.setText("56.000");    
+        harga.setText("56000");    
         }
     }
 }
