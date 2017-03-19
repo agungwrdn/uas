@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  * @author rawon
  */
 public class Home extends javax.swing.JFrame {
-
+    public Edit FAB = null;
     /**
      * Creates new form Home
      */
@@ -109,6 +109,11 @@ public class Home extends javax.swing.JFrame {
         });
 
         edit.setText("Edit");
+        edit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editActionPerformed(evt);
+            }
+        });
 
         update.setText("Update");
         update.addActionListener(new java.awt.event.ActionListener() {
@@ -215,7 +220,16 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_tambahActionPerformed
 
     private void tabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelMouseClicked
-        
+        int Tiket = tabel.getSelectedRow();
+        FAB.IDT = tabel.getValueAt(Tiket, 0).toString();
+        FAB.NAMA = tabel.getValueAt(Tiket, 1).toString();
+        FAB.JenisKA = tabel.getValueAt(Tiket, 2).toString();
+        FAB.JenisKAK = tabel.getValueAt(Tiket, 3).toString();
+        FAB.Tipe = tabel.getValueAt(Tiket, 4).toString();
+        FAB.Kursi = tabel.getValueAt(Tiket, 6).toString();
+        FAB.Harga = tabel.getValueAt(Tiket, 7).toString();
+        FAB.itemTerpilih();
+        this.dispose();
     }//GEN-LAST:event_tabelMouseClicked
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
@@ -239,6 +253,10 @@ public class Home extends javax.swing.JFrame {
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
          selectData();        // TODO add your handling code here:
     }//GEN-LAST:event_updateActionPerformed
+
+    private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
+               // TODO add your handling code here:
+    }//GEN-LAST:event_editActionPerformed
               
     /**
      * @param args the command line arguments
@@ -302,10 +320,10 @@ public class Home extends javax.swing.JFrame {
                 String Nama = rs.getString(2);
                 String StasiunA = rs.getString(4);
                 String StasiunB = rs.getString(5);
-                String JenisK = rs.getString(5);
-                String Waktu = rs.getString(6);
-                String Kursi = rs.getString(7);
-                String Harga = rs.getString(8);
+                String JenisK = rs.getString(6);
+                String Waktu = rs.getString(7);
+                String Kursi = rs.getString(8);
+                String Harga = rs.getString(9);
                 String data[] = {ID,Nama,StasiunA,StasiunB,JenisK,Waktu,Kursi,Harga};
                 dtm.addRow(data);
             }
