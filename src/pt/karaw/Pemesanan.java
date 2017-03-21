@@ -245,10 +245,6 @@ public class Pemesanan extends javax.swing.JFrame {
                                     .addComponent(Nama)
                                     .addComponent(jSeparator4)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(99, 99, 99)
-                                .addComponent(ID))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -274,7 +270,12 @@ public class Pemesanan extends javax.swing.JFrame {
                                                 .addComponent(JenisKereta, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(StasiunA, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(waktu, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(120, 120, 120)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(ID)
+                                            .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))))))
                         .addGap(88, 88, 88))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -398,13 +399,13 @@ public class Pemesanan extends javax.swing.JFrame {
 
     private void tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahActionPerformed
         if("".equals(Nama.getText()) || "".equals(ID.getText()) ||
-                "".equals(StasiunA.getSelectedItem()) || "".equals(StasiunAk.getSelectedItem()) || "".equals(kursi.getText()) || "".equals(harga.getText())){
+                "".equals(StasiunA.getSelectedItem()) || "".equals(StasiunAk.getSelectedItem()) || "".equals(JenisKereta.getSelectedItem()) || "".equals(kursi.getText()) || "".equals(harga.getText())){
             JOptionPane.showMessageDialog(this, "Harap Lengkapi Data", "Error", JOptionPane.WARNING_MESSAGE);
         } else {
            
-            String SQL = "INSERT INTO tiket (nama,idcard,stasiunA,stasiunK,waktu,kursi,harga) "
+            String SQL = "INSERT INTO tiket (nama,idcard,stasiunA,stasiunK,Jenis,waktu,kursi,harga) "
                     + "VALUES('"+Nama.getText()+"','"+ID.getText()+"','"+StasiunA.getSelectedItem()+"',"
-                    + "'"+StasiunAk.getSelectedItem()+"','"+waktu.getDateFormatString()+"','"+kursi.getText()+"','"+harga.getText()+"')";
+                    + "'"+StasiunAk.getSelectedItem()+"','"+JenisKereta.getSelectedItem()+"','"+waktu.getDateFormatString()+"','"+kursi.getText()+"','"+harga.getText()+"')";
                     
               int status = KoneksiDB.execute(SQL);
               if (status == 1){
